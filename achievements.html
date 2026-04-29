@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="achievements_page_title">Досягнення - ФК "Живчики"</title>
+    <meta name="description" content="Трофеї та перемоги футбольного клубу Живчики в національних та міжнародних чемпіонатах.">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__content">
+            <div class="header__logo">
+                <div class="logo-circle">
+                    <img src="img/logo.png" alt="Логотип" class="logo-img">
+                </div>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html" data-key="nav_home">ГОЛОВНА</a></li>
+                    <li><a href="about.html" data-key="nav_about">ПРО НАС</a></li>
+                    <li><a href="#" class="active" data-key="nav_achievements">ДОСЯГНЕННЯ</a></li>
+                    <li><a href="#" id="stats-btn" data-key="nav_stats">СТАТИСТИКА</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <div class="lang-combobox" id="langSelector">
+                    <button class="lang-btn">
+                        <img src="img/language.svg" alt="" class="icon-small">
+                        <span class="current-lang" data-key="lang_name">Українська</span>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="?lang=ua">Українська</a></li>
+                        <li><a href="?lang=en">English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="achievements-carousel">
+                <div class="carousel-header">
+                    <h1 data-key="achievements_title">Наші досягнення</h1>
+                    <div class="carousel-controls">
+                        <button class="control-btn" id="prevBtn"><img src="img/left-btn.png" alt="Назад"></button>
+                        <button class="control-btn" id="nextBtn"><img src="img/right-btn.png" alt="Вперед"></button>
+                    </div>
+                </div>
+
+                <div class="carousel-viewport">
+                    <div class="achievements-track" id="track">
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/ku.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">13</div>
+                            <h2 class="championship-name" data-key="cup_ukraine">Кубок України</h2>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/sc.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">9</div>
+                            <h2 class="championship-name" data-key="supercup_ukraine">Суперкубок України</h2>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/champion-ussr-championship.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">13</div>
+                            <h2 class="championship-name" data-key="champion_ussr">Чемпіон СРСР</h2>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/champion-ussr-cup.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">9</div>
+                            <h2 class="championship-name" data-key="cup_ussr">Кубок СРСР</h2>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/cupwinnerscup.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">2</div>
+                            <h2 class="championship-name" data-key="cup_winners">Кубок Кубків</h2>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/supercopa.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">1</div>
+                            <h2 class="championship-name" data-key="supercup_uefa">Суперкубок УЄФА</h2>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-image">
+                                <img src="img/upl.png" alt="Кубок" class="trophy-img">
+                            </div>
+                            <div class="win-count">17</div>
+                            <h2 class="championship-name" data-key="champion_ukraine">Чемпіон України</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__sponsors">
+                <a href="https://www.adidas.co.uk/football" target="_blank"><img src="img/adidas_gray.svg" alt="adidas"></a>
+                <a href="https://www.adobe.com/" target="_blank"><img src="img/adobe_gray.svg" alt="adobe"></a>
+                <a href="https://www.bmw.pl/pl/index.html" target="_blank"><img src="img/BMW_gray.svg" alt="bmw"></a>
+                <a href="https://eu.medical.canon/" target="_blank"><img src="img/canon_gray.svg" alt="canon"></a>
+                <a href="https://www.corpay.com/" target="_blank"><img src="img/corpay_gray.svg" alt="corpay"></a>
+                <a href="https://www.visitdubai.com/en" target="_blank"><img src="img/dubai_gray.svg" alt="dubai"></a>
+                <a href="https://www.ea.com/games/ea-sports-fc?setLocale=en-us" target="_blank"><img src="img/ea-sports_gray.svg" alt="easports"></a>
+                <a href="https://www.emirates.com/us/english" target="_blank"><img src="img/emirates_gray1.svg" alt="emirates"></a>
+                <a href="https://www.hp.com/us-en/home.html" target="_blank"><img src="img/hp_gray.svg" alt="hp"></a>
+                <a href="https://en.linglong.cn/about/index.html" target="_blank"><img src="img/linglong_gray.svg" alt="linglong"></a>
+                <a href="https://www.mahou.com/en/" target="_blank"><img src="img/mahou_gray.svg" alt="mahou"></a>
+                <a href="https://www.niveausa.com/products/men" target="_blank"><img src="img/nivea_gray.svg" alt="nivea"></a>
+                <a href="https://solandecabras.es/en/" target="_blank"><img src="img/solan_gray.svg" alt="solan"></a>
+            </div>
+            
+            <hr class="footer__divider">
+            
+            <div class="footer__bottom">
+                <div class="footer__copy" data-key="footer_copy">
+                    &copy; Футбольний клуб "Живчики" 2026
+                </div>
+                <div class="footer__socials">
+                    <a href="https://www.youtube.com/" target="_blank"><img src="img/youtube.svg" alt="YouTube" class="social-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/" target="_blank"><img src="img/x.svg" alt="X" class="social-icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.tiktok.com/" target="_blank"><img src="img/tiktok.svg" alt="TikTok" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

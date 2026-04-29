@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="about_page_title">Про нас - ФК "Живчики"</title>
+    <meta name="description" content="Дізнайтеся більше про історію та команду футбольного клубу Живчики.">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__content">
+            <div class="header__logo">
+                <div class="logo-circle">
+                    <img src="img/logo.png" alt="Логотип клубу" class="logo-img">
+                </div>
+            </div>
+            
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html" data-key="nav_home">ГОЛОВНА</a></li>
+                    <li><a href="#" class="active" data-key="nav_about">ПРО НАС</a></li>
+                    <li><a href="achievements.html" data-key="nav_achievements">ДОСЯГНЕННЯ</a></li>
+                    <li><a href="#" id="stats-btn" data-key="nav_stats">СТАТИСТИКА</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <div class="lang-combobox" id="langSelector">
+                    <button class="lang-btn">
+                        <img src="img/language.svg" alt="" class="icon-small">
+                        <span class="current-lang" data-key="lang_name">Українська</span>
+                    </button>
+                    <ul class="lang-dropdown">
+                        <li><a href="?lang=ua">Українська</a></li>
+                        <li><a href="?lang=en">English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title" data-key="about_title">Про нас</h1>
+
+            <section class="info-block">
+                <div class="info-block__text">
+                    <h2 data-key="history_header">Наша історія</h2>
+                    <p data-key="history_text">Футбольний клуб "Живчики" був заснований з метою об'єднання талановитих гравців та популяризації активного способу життя в нашому регіоні. 
+                        Наша тренувальна база та офіс розташовані за адресою <strong>м. Київ, вул. Спортивна, 12</strong>, де ми щодня працюємо над вдосконаленням майстерності команди. 
+                        <br>Якщо у вас виникли запитання щодо запису на перегляд або співпраці, ви завжди можете зателефонувати нам за номером: <br><strong>+38 (044) 123-45-67</strong>.</p>
+                </div>
+                <div class="info-block__image">
+                    <img src="img/fc-photo2.jpeg" alt="Інформація про клуб" class="block-img">
+                </div>
+            </section>
+
+            <section class="info-block info-block--reverse">
+                <div class="info-block__text">
+                    <h2 data-key="philosophy_header">Наша філософія та мета</h2>
+                    <p data-key="philosophy_text">Головною місією нашого клубу є виховання професійних атлетів, які базують свою гру на принципах взаємоповаги та дисципліни. 
+                        Ми віримо, що справжній успіх приходить лише через наполегливу працю та згуртованість усіх членів команди. 
+                        <br>Наша стратегія розвитку передбачає створення потужної футбольної академії для майбутніх поколінь. 
+                        Разом ми прагнемо до вершин українського футболу, зберігаючи вірність своїм традиціям та вболівальникам.</p>
+                </div>
+                <div class="info-block__image">
+                    <img src="img/fc-photo3.jpg" alt="Історія клубу" class="block-img">
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+           <section class="players-carousel">
+                <div class="carousel-header">
+                    <h2 data-key="players_header">Гравці</h2>
+                    <div class="carousel-controls">
+                        <button class="control-btn" id="prevBtn"><img src="img/left-btn.png" alt="Назад"></button>
+                        <button class="control-btn" id="nextBtn"><img src="img/right-btn.png" alt="Вперед"></button>
+                    </div>
+                </div>
+
+                <div class="carousel-viewport">
+                    <div class="players-track" id="track">
+                        
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">1</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_oleksiy_kovalenko">Олексій Коваленко</h3>
+                                <p data-key="pos_gk">Воротар</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">2</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_marko_melnyk">Марко Мельник</h3>
+                                <p data-key="pos_rb">Правий захисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">4</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_ivan_kravchenko">Іван Кравченко</h3>
+                                <p data-key="pos_cb">Центральний захисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">5</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_viktor_bondar">Віктор Бондар</h3>
+                                <p data-key="pos_cb">Центральний захисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">3</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_artem_sydorenko">Артем Сидоренко</h3>
+                                <p data-key="pos_lb">Лівий захисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">6</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_denys_polishchuk">Денис Поліщук</h3>
+                                <p data-key="pos_cdm">Опорний півзахисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">8</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+
+                            <div class="player-info">
+                                <h3 data-key="name_maksym_tkachenko">Максим Ткаченко</h3>
+                                <p data-key="pos_cm">Центральний півзахисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">10</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_andriy_shapoval">Андрій Шаповал</h3>
+                                <p data-key="pos_cam">Атакувальний півзахисник</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">7</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_ihor_petrenko">Ігор Петренко</h3>
+                                <p data-key="pos_rw">Правий вінгер</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">11</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_mykola_zubko">Микола Зубко</h3>
+                                <p data-key="pos_lw">Лівий вінгер</p>
+                            </div>
+                        </div>
+
+                        <div class="player-card">
+                            <div class="player-photo-wrapper">
+                                <span class="player-number">9</span>
+                                <img src="img/player.png" alt="Гравець" class="player-photo">
+                            </div>
+                            <div class="player-info">
+                                <h3 data-key="name_roman_shevchuk">Роман Шевчук</h3>
+                                <p data-key="pos_st">Центральний нападник</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__sponsors">
+                <a href="https://www.adidas.co.uk/football" target="_blank"><img src="img/adidas_gray.svg" alt="adidas"></a>
+                <a href="https://www.adobe.com/" target="_blank"><img src="img/adobe_gray.svg" alt="adobe"></a>
+                <a href="https://www.bmw.pl/pl/index.html" target="_blank"><img src="img/BMW_gray.svg" alt="bmw"></a>
+                <a href="https://eu.medical.canon/" target="_blank"><img src="img/canon_gray.svg" alt="canon"></a>
+                <a href="https://www.corpay.com/" target="_blank"><img src="img/corpay_gray.svg" alt="corpay"></a>
+                <a href="https://www.visitdubai.com/en" target="_blank"><img src="img/dubai_gray.svg" alt="dubai"></a>
+                <a href="https://www.ea.com/games/ea-sports-fc?setLocale=en-us" target="_blank"><img src="img/ea-sports_gray.svg" alt="easports"></a>
+                <a href="https://www.emirates.com/us/english" target="_blank"><img src="img/emirates_gray1.svg" alt="emirates"></a>
+                <a href="https://www.hp.com/us-en/home.html" target="_blank"><img src="img/hp_gray.svg" alt="hp"></a>
+                <a href="https://en.linglong.cn/about/index.html" target="_blank"><img src="img/linglong_gray.svg" alt="linglong"></a>
+                <a href="https://www.mahou.com/en/" target="_blank"><img src="img/mahou_gray.svg" alt="mahou"></a>
+                <a href="https://www.niveausa.com/products/men" target="_blank"><img src="img/nivea_gray.svg" alt="nivea"></a>
+                <a href="https://solandecabras.es/en/" target="_blank"><img src="img/solan_gray.svg" alt="solan"></a>
+            </div>
+            
+            <hr class="footer__divider">
+            
+            <div class="footer__bottom">
+                <div class="footer__copy" data-key="footer_copy">
+                    &copy; Футбольний клуб "Живчики" 2026
+                </div>
+                <div class="footer__socials">
+                    <a href="https://www.youtube.com/" target="_blank"><img src="img/youtube.svg" alt="YouTube" class="social-icon"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/" target="_blank"><img src="img/x.svg" alt="X" class="social-icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.tiktok.com/" target="_blank"><img src="img/tiktok.svg" alt="TikTok" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
