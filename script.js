@@ -22,7 +22,7 @@ const translations = {
         // про нас
         about_title: "Про нас",
         history_header: "Наша історія",
-        history_text: "Футбольний клуб \"Живчики\" був заснований з метою об’єднання талановитих гравців та популяризації активного способу життя в нашому регіоні. Наша тренувальна база та офіс розташовані за адресою <strong>м. Київ, вул. Спортивна, 12</strong>, де ми щодня працюємо над вдосконаленням майстерності команди. <br>Якщо у вас виникли запитання щодо запису на перегляд або співпраці, ви завжди можете зателефонувати нам за номером: <br><strong>+38 (044) 123-45-67</strong>.",
+        history_text: "Футбольний клуб \"Живчики\" був заснований з метою об’єднання талановитих гравців та популяризації активного способу життя в нашому регіоні. Наша тренувальна база та офіс розташовані за адресою <strong>м. Київ, вул. Спортивна, 12</strong>, де ми щодня працюємо над вдосконаленням майстерності команди. <br>Якщо у вас виникли запитання щодо запису на перегляд або співпраці, ви завжди можете зателефонувати нам за номером: <br><strong><a href='tel:+380441234567' class='phone-link'>+38 (044) 123-45-67</a></strong>.",
         philosophy_header: "Наша філософія та мета",
         philosophy_text: "Головною місією нашого клубу є виховання професійних атлетів, які базують свою гру на принципах взаємоповаги та дисципліни. Ми віримо, що справжній успіх приходить лише через наполегливу працю та згуртованість усіх членів команди. <br>Наша стратегія розвитку передбачає створення потужної футбольної академії для майбутніх поколінь. Разом ми прагнемо до вершин українського футболу, зберігаючи вірність своїм традиціям та вболівальникам.",
         
@@ -85,7 +85,7 @@ const translations = {
         // about us
         about_title: "About Us",
         history_header: "Our History",
-        history_text: "Football Club \"Zhyvchyky\" was founded with the aim of uniting talented players and promoting an active lifestyle in our region. Our training base and office are located at <strong>12 Sportyvna St., Kyiv</strong>, where we work daily on improving the team's skills. <br>If you have any questions regarding trial registration or cooperation, you can always call us at: <br><strong>+38 (044) 123-45-67</strong>.",
+        history_text: "Football Club \"Zhyvchyky\" was founded with the aim of uniting talented players and promoting an active lifestyle in our region. Our training base and office are located at <strong>12 Sportyvna St., Kyiv</strong>, where we work daily on improving the team's skills. <br>If you have any questions regarding trial registration or cooperation, you can always call us at: <br><strong><a href='tel:+380441234567' class='phone-link'>+38 (044) 123-45-67</a></strong>.",
         philosophy_header: "Our Philosophy and Goals",
         philosophy_text: "The main mission of our club is to raise professional athletes who base their game on the principles of mutual respect and discipline. We believe that true success comes only through hard work and the cohesion of all team members. <br>Our development strategy includes creating a powerful football academy for future generations. Together, we strive for the heights of Ukrainian football, remaining faithful to our traditions and fans.",
         
@@ -226,13 +226,63 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 
 
+
     // обробка кнопки статистика в навігації
     const statsBtn = document.getElementById("stats-btn");
+    
+    function showToast(message) {
+        let toast = document.getElementById('custom-toast');
+        
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'custom-toast';
+            toast.className = 'toast-message';
+            document.body.appendChild(toast);
+        }
+        
+        toast.textContent = message;
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
     if (statsBtn) {
         statsBtn.addEventListener('click', (event) => {
             event.preventDefault();
             const currentLang = localStorage.getItem('selectedLang') || 'ua';
-            alert(translations[currentLang].stats_alert);
+            showToast(translations[currentLang].stats_alert);
         });
     }
+
+
+
+    // гамбургер-меню
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const headerNav = document.querySelector('.header__nav');
+
+    if (hamburgerBtn && headerNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            headerNav.classList.toggle('open');
+            
+            if (headerNav.classList.contains('open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        const navLinks = headerNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                headerNav.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    
 });

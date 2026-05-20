@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -72,6 +73,8 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    position: relative;
+    z-index: 2000;
 }
 
 .lang-combobox {
@@ -479,57 +482,49 @@ body {
     margin: 0;
 }
 
-
-@media (max-width: 1199px) {
-    .container {
-        max-width: 960px;
-    }
-
-    .hero {
-        gap: 30px;
-    }
-    .hero__text h1 {
-        font-size: 32px;
-    }
-
-    .info-block {
-        gap: 40px;
-        margin-bottom: 60px;
-    }
-
-    .player-card {
-        flex: 0 0 calc((100% - (2 * 20px)) / 3); 
-    }
-
-    .achievement-card {
-        flex: 0 0 calc((100% - (3 * 20px)) / 4);
-    }
-    
-    .footer__sponsors {
-        justify-content: center;
-        gap: 30px;
-    }
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
 }
 
+.hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
+.toast-message {
+    position: fixed;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 3000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
 
-    .hero__text h1 {
-        font-size: 36px;
-    }
+.toast-message.show {
+    bottom: 30px;
+    opacity: 1;
+}
 
-    .player-card {
-        flex: 0 0 calc((100% - (3 * 20px)) / 4);
-    }
-
-    .achievement-card {
-        flex: 0 0 calc((100% - (4 * 20px)) / 5);
-    }
-
-    .footer__sponsors {
-        justify-content: space-between;
-    }
+.phone-link {
+    color: inherit;
+    text-decoration: underline;
 }
