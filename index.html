@@ -6,9 +6,17 @@
     <title data-key="index_page_title">Футбольний клуб "Живчики"</title>
     <meta name="description" content="Офіційна сторінка футбольного клубу Живчики. Новини, досягнення та історія команди.">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+    </noscript>
+    
+    <link rel="stylesheet" href="style_min.css">
 </head>
 <body>
 
@@ -31,7 +39,7 @@
             
             <div class="header__actions">
                 <div class="lang-combobox" id="langSelector">
-                    <button class="lang-btn">
+                    <button class="lang-btn" aria-label="Вибір мови">
                         <img src="img/language.svg" alt="" class="icon-small">
                         <span class="current-lang" data-key="lang_name">Українська</span>
                     </button>
